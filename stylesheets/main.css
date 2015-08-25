@@ -2,20 +2,71 @@
 /*@import a Google Font here!*/
 
 body {
+  background-image:url("../images/patient.png");
+  height: 1000px;
 
 }
-
-#container {
-
+.container {
+  
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .dashed {
+  border-style: 1px dashed;
+  border-radius: 20px;
+  border-color: pink;
+  margin-left: 20px;
+  margin-right: 20px;
 
 }
 
-.left-container, .right-container {
+.left-container{
+  float: left;
+  background-color: white;
+  border-radius: 20px;
+  margin-left: 60px;
+  margin-right: 20px;
+  border-color: orange;
+  border-style: solid;
+}
+
+.right-container {
+  float: right;
+ 
+  background-color: white;
+  border-radius: 20px;
+  margin-right: 80px;
+  border-color: orange;
+  border-style: solid;
+}
+
+.kitty-size {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  width: 360px;
+  height: 380px;
+  border-radius: 50%;
+  border-style: solid;
 
 }
+
 h1 {
+  font-size: 35px;
+  text-align: center;
+  font-family: monaco, Consolas, 'Lucida Console', monospace;
   
+}
+
+ul{
+  text-align: center;
+
+}
+
+li {
+  list-style: none;
+  font-size: 20px;
+  font-family: monaco, Consolas, 'Lucida Console', monospace;
+
 }
