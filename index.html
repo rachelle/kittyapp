@@ -12,44 +12,54 @@
 </head>
 <!-- sourcing in the controller -->
 <body ng-controller="KittiesController as vm">
+  <div class="nav">
     <h1>Adoption Center</h1>
+  </div>
     <div class="container">
       <div class="right-container">
-        <div>
-
-        <h1>Kitties who need a home</h1>
+        <div class="grid">
+       
+        <h2>Kitties who need a home</h2>
         <div class="dashed" ng-repeat="kitten in vm.allKittens | filter:{adopted:false}">
           <ul>
-            <li>My name is {{ kitten.catName }}</li>
+             <figure class="effect-lily">
+                <li ng-src="kitten.image">
+                <img class="kitty-size" src="{{ kitten.image }}">
+                </li>
+              </figure>
+           
+            <li><span>My name is {{ kitten.catName }}</li></span>
             <li>I am {{ kitten.monthsOld }}</li>
             <li>I am a {{ kitten.gender }}</li>
-            <li ng-src="kitten.image">
-            <img class="kitty-size" src="{{ kitten.image }}">
-            </li>
             <li>Adopt me? 
             <input type="checkbox" ng-click="kitten.adopted = !kitten.adopted"></input>
             </li>
           </ul>
         </div>
+      </div>
     </div>
   </div>
-</div>
     <div class="left-container">
-      <div class="adopted">
-        <h1>Kitties Adopted</h1> 
+      <div class="grid">
+        <h2>Kitties Adopted</h2> 
           <div class="dashed" ng-repeat="kitten in vm.allKittens | filter: {adopted:true}">
+            
               <ul> 
+                <figure class="effect-lily">
+                  <li ng-src="kitten.image">
+                <img class="kitty-size" src="{{ kitten.image }}">
+                </li>
+              </figure>
                 <li>My name is {{ kitten.catName }}</li>
                 <li>I am {{ kitten.monthsOld }}</li>
                 <li>I am a {{ kitten.gender }}</li>
-                <li ng-src="kitten.image">
-                <img class="kitty-size" src="{{ kitten.image }}">
-                </li>
+                
                 <li>Found a home
-                <input type="checkbox" ng-click="kitten.adopted = !kitten.adopted"> 
-              </input> 
-                </li> 
+                <label class="myCheckbox">
+                <input type="checkbox" ng-click="kitten.adopted = !kitten.adopted"></input></li>
+                </label> 
               </ul>
+            </figure>
             </div>
           </div>
           </div>
